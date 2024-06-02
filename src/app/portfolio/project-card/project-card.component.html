@@ -1,24 +1,22 @@
 <mat-card class="example-card p-4 max-w-[20.5rem]">
   <!-- Header -->
   <mat-card-header>
-    <mat-card-title>{{ project.name || "" }}</mat-card-title>
+    <mat-card-title>{{ project?.name || "" }}</mat-card-title>
   </mat-card-header>
 
   <!-- Cotent -->
   <mat-card-content>
-    <p>{{ project.summary }}</p>
+    <p>{{ project?.summary }}</p>
   </mat-card-content>
 
   <mat-card-actions class="justify-center">
-    <button mat-flat-button color="primary" (click)="openDialog()">
-      View More
-    </button>
+    <button mat-flat-button color="primary">Basic</button>
   </mat-card-actions>
 
   <!-- Footer -->
   <mat-card-footer class="border-t-2 border-grey pt-2">
     <div class="flex flex-wrap justify-center">
-      <div *ngFor="let tag of project.tags">
+      <div *ngFor="let tag of project?.tags">
         <div class="tag me-2 mb-1" [style.background-color]="tag.color">
           {{ tag }}
         </div>
