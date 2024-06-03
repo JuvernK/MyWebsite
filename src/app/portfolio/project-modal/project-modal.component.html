@@ -1,1 +1,41 @@
-<p>project-modal works!</p>
+<!-- Modal Header -->
+<div class="flex justify-between p-4">
+  <h2>{{ data.project.name }}</h2>
+  <button
+    class="flex align-baseline"
+    aria-label="close dialog"
+    (click)="onCancel()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mdb-carousel [controls]="true" [indicators]="true">
+  <mdb-carousel-item *ngFor="let image of data.project.images">
+    <img
+      src="{{ image }}"
+      class="d-block w-100"
+      alt="{{ data.project.name }} images"
+    />
+  </mdb-carousel-item>
+</mdb-carousel>
+
+<div class="px-4">
+  <h3 class="mt-2">Description</h3>
+  <p>{{ data.project.description }}</p>
+  <p>
+    You can find this project on my Github
+    <a href="{{ data.project.projectUrl }}" target="_blank">here</a>
+  </p>
+</div>
+
+<hr class="mx-4 my-2" />
+<div class="pb-8 flex flex-wrap justify-center">
+  <div
+    class="tag me-2 mb-1"
+    [style.background-color]="tag.color"
+    *ngFor="let tag of data.project.tags"
+  >
+    {{ tag }}
+  </div>
+</div>
