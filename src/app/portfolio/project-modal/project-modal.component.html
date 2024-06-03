@@ -10,27 +10,32 @@
   </button>
 </div>
 
-<!-- Modal Body -->
 <mdb-carousel [controls]="true" [indicators]="true">
-  <mdb-carousel-item>
+  <mdb-carousel-item *ngFor="let image of data.project.images">
     <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+      src="{{ image }}"
       class="d-block w-100"
-      alt="..."
-    />
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-      class="d-block w-100"
-      alt="..."
-    />
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-      class="d-block w-100"
-      alt="..."
+      alt="{{ data.project.name }} images"
     />
   </mdb-carousel-item>
 </mdb-carousel>
+
+<div class="px-4">
+  <h3 class="mt-2">Description</h3>
+  <p>{{ data.project.description }}</p>
+  <p>
+    You can find this project on my Github
+    <a href="{{ data.project.projectUrl }}" target="_blank">here</a>
+  </p>
+</div>
+
+<hr class="mx-4 my-2" />
+<div class="pb-8 flex flex-wrap justify-center">
+  <div
+    class="tag me-2 mb-1"
+    [style.background-color]="tag.color"
+    *ngFor="let tag of data.project.tags"
+  >
+    {{ tag }}
+  </div>
+</div>

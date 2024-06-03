@@ -11,9 +11,9 @@ export class ProjectsService {
       id: 0,
       name: 'Sample Python Project',
       images: [
-        './assets/project-image/Image1.png',
-        './assets/project-image/Image2.png',
-        './assets/avatar/image3.png',
+        'https://mdbcdn.b-cdn.net/img/new/slides/041.webp',
+        'https://mdbcdn.b-cdn.net/img/new/slides/042.webp',
+        'https://mdbcdn.b-cdn.net/img/new/slides/043.webp',
       ],
       projectUrl: '//www.github.com',
       summary: 'Python project that analyzes stock market data.',

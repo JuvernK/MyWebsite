@@ -26,7 +26,6 @@ export class ProjectCardComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(ProjectModalComponent, {
       width: '40rem',
-      height: '45rem',
       data: { project: this.project },
     });
 
