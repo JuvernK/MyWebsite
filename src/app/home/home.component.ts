@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Project } from '../models/project';
@@ -21,9 +21,9 @@ export class HomeComponent {
     private projectsService: ProjectsService
   ) {
     this.titleService.setTitle("Juvern's web - Home Page");
-  }
-
-  ngOnInit(): void {
     this.featuredProjects = this.projectsService.getProjectByID(0);
   }
+
+  // ! BugFix: Unable to show feature project unless when into other page and back to home page
+
 }
