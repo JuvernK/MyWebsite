@@ -4,6 +4,7 @@ export class Tag {
   static readonly PYTHON = new Tag('Python', 'indianred');
   static readonly JAVA = new Tag('Java', 'orange');
   static readonly C = new Tag('C', 'green');
+  static readonly NODEJS = new Tag('Node.js', 'darkgreen');
 
   private constructor(
     private readonly key: string,

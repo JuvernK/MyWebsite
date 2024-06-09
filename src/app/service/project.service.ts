@@ -115,4 +115,15 @@ export class ProjectsService {
 
     return project;
   }
+
+  getProjectsByTag(tag: Tag[]): Project[] {
+    let res: Project[] = [];
+    this.projects.forEach((project) => {
+      if (project.tags.some((t) => tag.includes(t))) {
+        res.push(project);
+      }
+    });
+
+    return res;
+  }
 }

@@ -21,9 +21,10 @@ export class HomeComponent {
     private projectsService: ProjectsService
   ) {
     this.titleService.setTitle("Juvern's web - Home Page");
-    this.featuredProjects = this.projectsService.getProjectByID(0);
+    // TODO: Get featured projects
+    // this.featuredProjects = this.projectsService.getProjectByID(0);
   }
 
   // ! BugFix: Unable to show feature project unless when into other page and back to home page
-
+  // Suspected: Carousel script not loaded properly
 }
