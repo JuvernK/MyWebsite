@@ -1,4 +1,61 @@
 <div class="container mt-8 mx-auto">
+  
+  <div class="mb-2">
+    <div>
+      <button cButton class="me-2" color="primary" (click)="isCollapsed = !isCollapsed">Filter</button>
+      <button cButton [hidden]="!isFiltering" class="me-2 border" color="secondary" (click)="resetFilter()">Reset</button>
+      <div [visible]="isCollapsed" cCollapse>
+        <c-card class="mt-3 shadow-sm border mb-4">
+          <c-card-body>
+            
+            <form [formGroup]="filterForm">
+              <div class="grid grid-cols-5 mx-0">
+
+                <div>
+                  <b>Languages:</b>
+                  <div>
+                      <input id="typeScript" type="checkbox" class="me-2" formControlName="TypeScript" (change)="myFilter()" >
+                      <label for="typeScript">TypeScript</label>
+                  </div>
+                  <div>
+                    <input id="java" type="checkbox" class="me-2" formControlName="Java" (change)="myFilter()" >
+                    <label for="java">Java</label>
+                  </div>
+                  <div>
+                    <input id="python" type="checkbox" class="me-2" formControlName="Python" (change)="myFilter()" >
+                    <label for="python">Python</label>
+                  </div>
+                  <div>
+                    <input id="c" type="checkbox" class="me-2" formControlName="C" (change)="myFilter()" >
+                    <label for="c">C</label>
+                  </div>
+
+                </div>
+
+
+                <div>
+                  <b>Framework:</b>
+                  <div>
+                    <input id="angular" type="checkbox" class="me-2" formControlName="Angular" (change)="myFilter()" >
+                    <label for="angular">Angular</label>
+                  </div>
+                  <div>
+                    <input id="nodeJs" type="checkbox" class="me-2" formControlName="NodeJs" (change)="myFilter()" >
+                    <label for="nodeJs">NodeJs</label>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </c-card-body>
+        </c-card> 
+
+
+      </div>
+    </div>
+  </div>
+
+  
   <div
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
   >

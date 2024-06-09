@@ -11,9 +11,9 @@ export class ProjectsService {
       id: 0,
       name: 'Sample Python Project',
       images: [
-        'https://mdbcdn.b-cdn.net/img/new/slides/041.webp',
-        'https://mdbcdn.b-cdn.net/img/new/slides/042.webp',
-        'https://mdbcdn.b-cdn.net/img/new/slides/043.webp',
+        './assets/project-image/Image1.png',
+        './assets/project-image/Image2.png',
+        './assets/project-image/Image3.png',
       ],
       projectUrl: '//www.github.com',
       summary: 'Python project that analyzes stock market data.',
@@ -114,5 +114,16 @@ export class ProjectsService {
     }
 
     return project;
+  }
+
+  getProjectsByTag(tag: Tag[]): Project[] {
+    let res: Project[] = [];
+    this.projects.forEach((project) => {
+      if (project.tags.some((t) => tag.includes(t))) {
+        res.push(project);
+      }
+    });
+
+    return res;
   }
 }
