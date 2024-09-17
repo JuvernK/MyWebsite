@@ -37,12 +37,12 @@ export class PortfolioComponent implements OnInit {
   isFiltering: boolean = false;
 
   filterForm = this.formBuilder.group({
-    TypeScript: [false],
-    Angular: [false],
-    Python: [false],
-    Java: [false],
-    C: [false],
-    NodeJs: [false],
+    TypeScript: [true],
+    Angular: [true],
+    Python: [true],
+    Java: [true],
+    C: [true],
+    NodeJs: [true],
   });
 
 
