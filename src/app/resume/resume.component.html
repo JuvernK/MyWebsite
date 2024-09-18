@@ -1,1 +1,12 @@
-<p>resume works!</p>
+<div class="container text-center mx-auto">
+    <button (click)="DownloadResume()" class="btn btn-primary mb-5 shadow border mt-4">Download PDF Resume</button>
+
+    <p-accordion [activeIndex]="0" class="mx-5/7">
+        <p-accordionTab [header]="tab.title" *ngFor="let tab of resumeContent">
+            <p class="m-0">
+                {{ tab.content }}
+            </p>
+        </p-accordionTab>
+    </p-accordion>
+    
+</div>
