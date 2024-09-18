@@ -9,3 +9,8 @@ export interface Project {
   images: string[];
   tags: Tag[];
 }
+export interface ResumeContent {
+  title:string;
+  content: string;
+}
+
