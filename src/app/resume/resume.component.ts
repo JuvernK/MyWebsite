@@ -31,11 +31,10 @@ export class ResumeComponent {
   DownloadResume() {
     let link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'assets/Resume.pdf');
+    link.setAttribute('href', 'assets/resume-content/Resume.pdf');
     link.setAttribute('download', 'JuvernResume.pdf');
     link.click();
     link.remove();
   }
-
 }
  

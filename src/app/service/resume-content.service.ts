@@ -18,6 +18,10 @@ export class ResumeContentService {
     {
       title: 'Skills',
       content: 'Python, Java, Angular, C/C++'
+    },
+    {
+      title: 'Certfications',
+      content: 'To be updated'
     }
   ]
 
