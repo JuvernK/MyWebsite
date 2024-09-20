@@ -4,9 +4,10 @@
 /* MDB SCSS */
 @import "mdb-angular-ui-kit/assets/scss/mdb.scss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Ensure Tailwind CSS is properly installed and configured */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Order */
 @layer reset, primeng;
@@ -15,10 +16,12 @@
 @layer reset {
     button,
     input {
-        /* CSS to Reset */
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
     }
 }
-
 
 html,
 body {
