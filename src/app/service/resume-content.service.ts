@@ -21,7 +21,11 @@ export class ResumeContentService {
     },
     {
       title: 'Certfications',
-      content: 'To be updated'
+      content: 'Bachelor in Computer Science at Monash University, Diploma in Higher Education Studies, Diploma in Canadian International Matriculation Programme(CIMP)',
+      image: ['../assets/resume-content/Certificates/Cert_Proj_Archievement.png',
+              '../assets/resume-content/Certificates/Cert_Project_Award.png',
+              '../assets/resume-content/Certificates/Diploma_CIMP.png',
+              '../assets/resume-content/Certificates/Diploma_DHES.png']
     }
   ]
 

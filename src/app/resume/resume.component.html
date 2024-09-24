@@ -6,6 +6,12 @@
             <p class="m-0">
                 {{ tab.content }}
             </p>
+
+            <!-- If there are images, display them -->
+        <div *ngIf="tab.image && tab.image.length > 0" class="w-80% justify-center gap-4 mt-4">
+            <img *ngFor="let image of tab.image" [src]="image" alt="Certification Image" class="shadow-lg rounded-lg">
+        </div>
+
         </p-accordionTab>
     </p-accordion>
 </div>
