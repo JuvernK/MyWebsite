@@ -12,5 +12,6 @@ export interface Project {
 export interface ResumeContent {
   title:string;
   content: string;
+  image?: string[];
 }
 
